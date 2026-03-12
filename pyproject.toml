@@ -1,0 +1,29 @@
+[project]
+name = "data-utils"
+version = "0.1.0"
+description = "Shared parsing utilities — fragment abstraction for structured content"
+authors = [
+  { name = "Alex Warren", email = "exrhizo@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+  "pyyaml",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["data_utils*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "RUF"]
+ignore = ["E501"]
